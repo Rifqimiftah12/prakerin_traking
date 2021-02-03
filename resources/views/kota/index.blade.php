@@ -1,23 +1,31 @@
 @extends('layouts.admin')
 
 @section('content')
+
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
+        @if (session('message'))
+                <div class="alert alert-success" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                {{ session('message') }}
+                </div>
+            @elseif(session('message1'))
+                <div class="alert alert-danger" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                {{ session('message1') }}
+                </div>
+            @endif
+
             <div class="card">
-                <div class="card-header"><center><b>{{ __('Data Kota') }}</b></center></div>
+                <div class="card-header"><center><b>{{ __('Data Kota') }}</b></center>
+            </div>
 
-                <div class="card-body">
-                <a href="{{route('kota.create')}}"class="btn btn-outline-success float-right"><b>Tambah Data(+)</b></a>
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                  <table class="table">
+            <div class="card-body">
+            <a href="{{route('kota.create')}}" class="float-right btn btn-outline-primary">Tambah Data</a>
+            <table id="example1" class="table table-bordered table-striped">
                     <thead>
-                      <tr>
+                    <tr>
                         <th scope="col">No</th>
                         <th scope="col">Provinsi</th>
                         <th scope="col">Kode Kota</th>
@@ -41,13 +49,14 @@
                                 <button type="submit" class="btn btn-danger fa fa-trash-alt btn-sm" onclick="return confirm('Apakah anda yakin ?')"></button>
                         </td>
                       </tr>
-                          </form>
-                      @endforeach
-                    </tbody>
-                  </table>
+                                    @endforeach
+                            </tbody>  
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

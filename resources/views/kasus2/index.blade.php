@@ -1,16 +1,4 @@
 @extends('layouts.admin')
-@section('css')
-<!-- Font Awesome -->
-  <link rel="stylesheet" href="{{asset('assets/plugins/fontawesome-free/css/all.min.css')}}">
-  <!-- Ionicons -->
-  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="{{asset('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="{{asset('assets/dist/css/adminlte.min.css')}}">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-@endsection
 
 @section('content')
 
@@ -37,7 +25,7 @@
             <a href="{{route('kasus2.create')}}" class="float-right btn btn-outline-primary">Tambah Data</a>
             <table id="example1" class="table table-bordered table-striped">
                     <thead>
-                     <tr class="bg-info">
+                     <tr>
                       <th scope="col">No</th>
                                             <th scope="col"><center>Lokasi</center></th>
                                             <th scope="col"><center>RW</center></th>
@@ -83,23 +71,4 @@
     </div>
 </div>
 </div>
-@endsection
-
-@section('js')
-<script src="{{asset('assets/plugins/datatables/jquery.dataTables.js')}}"></script>
-<script src="{{asset('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
-
-<script>
-  $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-    });
-  });
-</script>
 @endsection
