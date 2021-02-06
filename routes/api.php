@@ -1,10 +1,11 @@
 <?php
 
 use App\Models\Provinsi;
+use App\Models\Kasus2;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProvinsiController;
-
+use App\Http\Controllers\Api\ApiController;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
@@ -16,13 +17,12 @@ Route::post('provinsi', [ProvinsiController::class,'store']);
 Route::get('provinsi/{id}', [ProvinsiController::class,'show']);
 Route::delete('/provinsi/{id}', [ProvinsiController::class,'destroy']);
 
-use App\Http\Controllers\Api\ApiController;
-use App\Models\Kasus2;
-use App\Models\Kota;
-use App\Models\Kecamatan;
-use App\Models\Kelurahan;
-use App\Models\Rw;
+
 Route::get('hari', [ApiController::class,'hari']);
 Route::get('provinsi1/{id}', [ApiController::class,'provinsi']);
 Route::get('provinsi2', [ApiController::class,'provinsi1']);
+Route::get('kota', [ApiController::class,'kota']);
+Route::get('kecamatan', [ApiController::class,'kecamatan']);
+Route::get('kelurahan', [ApiController::class,'kelurahan']);
 Route::get('indonesia', [ApiController::class,'indonesia']);
+Route::get('global', [ApiController::class, 'global']);

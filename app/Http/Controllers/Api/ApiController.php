@@ -1,16 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-
+use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Models\Kasus2;
-use App\Models\Provinsi;
-use App\Models\Kota;
-use App\Models\Kecamatan;
-use App\Models\Kelurahan;
-use App\Models\Rw;
 class ApiController extends Controller
 {
     /**
@@ -43,7 +38,7 @@ class ApiController extends Controller
             'status' => 200,
             'data' => [
                 'Hari Ini' => $arr2,
-                'total' => $arr1
+                'Indonesia' => $arr1
             ],
             'message' => 'Berhasil'
         ];
@@ -97,6 +92,70 @@ class ApiController extends Controller
                 ];
                 return response()->json($res,200);
     }
+
+    public function kota()
+    {
+        //Data Kota 
+        $data = DB::table('kotas')
+        ->join('kecamatans','kecamatans.id_kota', '=', 'kotas.id')
+        ->join('kelurahans','kelurahans.id_kecamatan', '=', 'kecamatans.id')
+        ->join('rws','rws.id_kelurahan', '=', 'kelurahans.id')
+        ->join('kasus2s','kasus2s.id_rw', '=', 'rws.id')
+        ->select('nama_kota',
+        DB::raw('sum(kasus2s.jumlah_positif) as jumlah_positif'),
+        DB::raw('sum(kasus2s.jumlah_meninggal) as jumlah_meninggal'),
+        DB::raw('sum(kasus2s.jumlah_sembuh) as jumlah_sembuh'))
+        ->groupBy('nama_kota')
+        ->get();
+                $res = [
+                    'succsess' => true,
+                    'Data' => $data,
+                    'message' => 'Data Kasus Di Tampilkan'
+                ];
+                return response()->json($res,200);
+    }
+
+    public function kecamatan()
+    {
+        //Data Kota 
+        $data = DB::table('kecamatans')
+        ->join('kelurahans','kelurahans.id_kecamatan', '=', 'kecamatans.id')
+        ->join('rws','rws.id_kelurahan', '=', 'kelurahans.id')
+        ->join('kasus2s','kasus2s.id_rw', '=', 'rws.id')
+        ->select('nama_kecamatan',
+        DB::raw('sum(kasus2s.jumlah_positif) as jumlah_positif'),
+        DB::raw('sum(kasus2s.jumlah_meninggal) as jumlah_meninggal'),
+        DB::raw('sum(kasus2s.jumlah_sembuh) as jumlah_sembuh'))
+        ->groupBy('nama_kecamatan')
+        ->get();
+                $res = [
+                    'succsess' => true,
+                    'Data' => $data,
+                    'message' => 'Data Kasus Di Tampilkan'
+                ];
+                return response()->json($res,200);
+    }
+
+    public function kelurahan()
+    {
+        //Data Kota 
+        $data = DB::table('kelurahans')
+        ->join('rws','rws.id_kelurahan', '=', 'kelurahans.id')
+        ->join('kasus2s','kasus2s.id_rw', '=', 'rws.id')
+        ->select('nama_kelurahan',
+        DB::raw('sum(kasus2s.jumlah_positif) as jumlah_positif'),
+        DB::raw('sum(kasus2s.jumlah_meninggal) as jumlah_meninggal'),
+        DB::raw('sum(kasus2s.jumlah_sembuh) as jumlah_sembuh'))
+        ->groupBy('nama_kelurahan')
+        ->get();
+                $res = [
+                    'succsess' => true,
+                    'Data' => $data,
+                    'message' => 'Data Kasus Di Tampilkan'
+                ];
+                return response()->json($res,200);
+    }
+
     public function indonesia()
     {
       
@@ -122,6 +181,18 @@ class ApiController extends Controller
                 ];
                 return response()->json($res,200);
     }
+    public function global()
+    {
+        $data = Http::get('https://api.kawalcorona.com/')->json();
+        $hasil = [
+           'Success' => true,
+           'Data' => $data,
+           'message' => 'Data Kasus Di Tampilkan'
+
+       ];
+       return response()->json($hasil,200);
+    }
+
 
     /**
      * Show the form for creating a new resource.

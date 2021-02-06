@@ -1,65 +1,55 @@
 <div>
     <div class ="m-auto">
         <div class="mb-8">
-            <label class="inline-block w-32 font-bold mr-5">Provinsi :</label><br>
-                <select name="provinsi" wire:model="pprovinsi" 
-                    class="form-control p-2 px-4 py-2 pr-8 leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline form-group"
-                    >
-                <option value='' >Pilih provinsi</option>
-                @foreach($provinsi as $data)
-                    <option value={{ $data->id }}>{{ $data->nama_provinsi }}</option>
+        <label for="provinsi">Provinsi</label>
+            <select wire:model="selectedProvinsi" class="form-control">
+                <option value="" selected>Pilih Provinsi</option>
+                @foreach($provinsi as $provinsis)
+                    <option value="{{ $provinsis->id }}">{{ $provinsis->nama_provinsi }}</option>
                 @endforeach
             </select>
         </div>
-        @if(!is_null($pprovinsi))
+        @if(!is_null($selectedProvinsi))
             <div class="mb-8 form-group">
-                <label class="inline-block w-32 font-bold mr-5">Kota :</label><br>
-                <select name="kota" wire:model="pkota" 
-                    class="form-control p-2 px-4 py-2 pr-8 leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline form-group"
-                    >
-                    <option value='' >Pilih kota</option>
-                    @foreach($kota as $item)
-                        <option value={{ $item->id }} <?= (!is_null($pprovinsi) && $item->id_provinsi == $pprovinsi)? 'selected' : '';?>>{{ $item->nama_kota }}</option>
+            <label for="Kota">Kota</label>
+                <select wire:model="selectedKota" class="form-control">
+                    <option value="" selected>Pilih Kota</option>
+                    @foreach($kota as $kotas)
+                        <option value="{{ $kotas->id }}">{{ $kotas->nama_kota }}</option>
                     @endforeach
                 </select>
             </div>
             @endif
-        @if(!is_null($pkota))
+        @if (!is_null($selectedKota))
             <div class="mb-8 form-group">
-                <label class="inline-block w-32 font-bold mr-5">Kecamatan :</label><br>
-                <select name="kecamatan" wire:model="pkecamatan" 
-                    class="form-control p-2 px-4 py-2 pr-8 leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline form-group"
-                    >
-                    <option value=''>Pilih kecamatan</option>
-                    @foreach($kecamatan as $kec)
-                        <option value={{ $kec->id }} <?= (!is_null($pkota) && $kec->id_kota == $pkota)? 'selected' : '';?>>{{ $kec->nama_kecamatan }}</option>
+            <label for="kecamatan">Kecamatan</label>
+                <select wire:model="selectedKecamatan" class="form-control">
+                    <option value="" selected>Pilih Kecamatan</option>
+                    @foreach($kecamatan as $kecamatans)
+                        <option value="{{ $kecamatans->id }}">{{ $kecamatans->nama_kecamatan }}</option>
                     @endforeach
                 </select>
             </div>
             @endif
 
-        @if(!is_null($pkecamatan))
+            @if (!is_null($selectedKecamatan))
             <div class="mb-8 form-group">
-                <label class="inline-block w-32 font-bold mr-5">Kelurahan :</label><br>
-                <select name="kelurahan" wire:model="pkelurahan" 
-                    class="form-control p-2 px-4 py-2 pr-8 leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline form-group"
-                    >
-                    <option value=''>Pilih  Kelurahan</option>
-                    @foreach($kelurahan as $kel)
-                        <option value={{ $kel->id }} <?= (!is_null($pkecamatan) && $kel->id_kecamatan == $pkecamatan)? 'selected' : '';?>>{{ $kel->nama_kelurahan }}</option>
+            <label for="kelurahan" >Kelurahan</label>
+                <select wire:model="selectedKelurahan" class="form-control">
+                    <option value="" selected>Pilih Kelurahan</option>
+                    @foreach ($kelurahan as $kel)
+                        <option value="{{ $kel->id }}">{{$kel->nama_kelurahan}}</option>
                     @endforeach
                 </select>
             </div>
             @endif
-        @if(!is_null($pkelurahan))
+            @if (!is_null($selectedKelurahan))
             <div class="mb-8 form-group">
-                <label class="inline-block w-32 font-bold mr-5">rw :</label><br>
-                <select name="id_rw" wire:model="prw" 
-                    class="form-control p-2 px-4 py-2 pr-8 leading-tight bg-white border border-gray-400 rounded shadow appearance-none hover:border-gray-500 focus:outline-none focus:shadow-outline form-group"
-                    >
-                    <option value=''>Pilih  rw</option>
-                    @foreach($rw as $r)
-                        <option value={{ $r->id }} <?= (!is_null($pkelurahan) && $r->id_kelurahan == $pkelurahan)? 'selected' : '';?>>{{ $r->nama }}</option>
+            <label for="rw" >Rw</label>
+                <select wire:model="selectedRw" class="form-control" name="id_rw">
+                    <option value="" selected>Pilih Rw</option>
+                    @foreach($rw as $rws)
+                        <option value="{{ $rws->id }}">{{ $rws->nama }}</option>
                     @endforeach
                 </select>
             </div>

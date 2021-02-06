@@ -26,10 +26,8 @@ class RwController extends Controller
     {
         $request->validate([
             'id_kelurahan' => 'required',
-            'nama' => 'required|unique:rws',
         ],[
             'id_kelurahan.required' => 'Kelurahan is required',
-            'nama.required' => 'Rw required'
         ]);
         $rw = new Rw;
         $rw->id_kelurahan = $request->id_kelurahan;

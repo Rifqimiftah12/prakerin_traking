@@ -18,12 +18,13 @@
             @endif
 
             <div class="card">
-                <div class="card-header"><center><b>{{ __('Data Kota') }}</b></center>
+                <div class="card-header"><b>{{ __('Data Kota') }}</b>
+                <a href="{{route('kota.create')}}" class="float-right btn btn-primary">Tambah Data(+)</a>
             </div>
 
             <div class="card-body">
-            <a href="{{route('kota.create')}}" class="float-right btn btn-outline-primary">Tambah Data</a>
             <table id="example1" class="table table-bordered table-striped">
+            <table class="table table-bordered" id="datatable">
                     <thead>
                     <tr>
                         <th scope="col">No</th>
@@ -50,7 +51,8 @@
                         </td>
                       </tr>
                                     @endforeach
-                            </tbody>  
+                            </tbody> 
+                            </table> 
                         </table>
                     </div>
                 </div>
