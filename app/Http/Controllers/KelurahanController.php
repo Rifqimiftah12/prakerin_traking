@@ -26,16 +26,13 @@ class KelurahanController extends Controller
     {
         $request->validate([
             'id_kecamatan' => 'required',
-            'kode_kelurahan' => 'required|int|unique:kelurahans',
             'nama_kelurahan' => 'required|unique:kelurahans',
         ],[
             'id_kecamatan.required' => 'Kecamatan is required',
-            'kode_kelurahan.required' => 'Kode is required',
             'nama_kelurahan.required' => 'kelurahan required'
         ]);
        $kelurahan = new Kelurahan;
        $kelurahan->id_kecamatan = $request->id_kecamatan;
-       $kelurahan->kode_kelurahan = $request->kode_kelurahan;
        $kelurahan->nama_kelurahan = $request->nama_kelurahan;
        $kelurahan->save();
         return redirect()->route('kelurahan.index')->with(['message' => 'Data kelurahan Berhasil disimpan']);
@@ -55,7 +52,6 @@ class KelurahanController extends Controller
     {
        $kelurahan = Kelurahan::findOrFail($id);
        $kelurahan->id_kecamatan = $request->id_kecamatan;
-       $kelurahan->kode_kelurahan = $request->kode_kelurahan;
        $kelurahan->nama_kelurahan = $request->nama_kelurahan;
        $kelurahan->save();
         return redirect()->route('kelurahan.index')->with(['message' => 'Data kelurahan Berhasil disimpan']);

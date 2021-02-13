@@ -26,16 +26,13 @@ class KecamatanController extends Controller
     {
         $request->validate([
             'id_kota' => 'required',
-            'kode_kecamatan' => 'required|int|unique:kecamatans',
             'nama_kecamatan' => 'required|unique:kecamatans',
         ],[
             'id_provinsi.required' => 'Provinsi is required',
-            'kode_kecamatan.required' => 'Kode is required',
             'nama_kecamatan.required' => 'kecamatan required'
         ]);
         $kecamatan = new Kecamatan;
         $kecamatan->id_kota = $request->id_kota;
-        $kecamatan->kode_kecamatan = $request->kode_kecamatan;
         $kecamatan->nama_kecamatan = $request->nama_kecamatan;
         $kecamatan->save();
         return redirect()->route('kecamatan.index')->with(['message' => 'Data kecamatan Berhasil disimpan']);
@@ -55,7 +52,6 @@ class KecamatanController extends Controller
     {
         $kecamatan = Kecamatan::findOrFail($id);
         $kecamatan->id_kota = $request->id_kota;
-        $kecamatan->kode_kecamatan = $request->kode_kecamatan;
         $kecamatan->nama_kecamatan = $request->nama_kecamatan;
         $kecamatan->save();
         return redirect()->route('kecamatan.index')->with(['message' => 'Data kecamatan Berhasil disimpan']);
