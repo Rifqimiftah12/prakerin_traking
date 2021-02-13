@@ -35,7 +35,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Groovin</a></h1>
+      <h1 class="logo mr-auto"><a href="#hero">Traking Covid</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo mr-auto"><img src="{{asset('assets/user/img/logo.png')}}" alt="" class="img-fluid"></a>-->
 
@@ -43,15 +43,16 @@
         <ul>
           <li class="active"></li>
           <li><a href="#hero">Home</a></li>
-          <li><a href="#team">Team</a></li>
+          <li><a href="#counts">Data Kasus</a></li>
           <li><a href="#provinsi">Provinsi</a></li>
-          <li><a href="#global">Global</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#global">Dunia</a></li>
+          <li><a href="#team">Tim</a></li>
+          <li><a href="#contact">Kontak</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+      <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
 
     </div>
   </header><!-- End Header -->
@@ -66,41 +67,37 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background: url({{asset('assets/user/img/slide/slide-1.jpg')}}">
+          <div class="carousel-item active" style="background: url({{asset('assets/user/img/slide/slide-4.jpg')}}">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Grow Your Business</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <div>
-                  <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-                </div>
               </div>
             </div>
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background: url({{asset('assets/user/img/slide/slide-2.jpg')}}">
+          <div class="carousel-item" style="background: url({{asset('assets/user/img/slide/slide-5.jpg')}}">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <div>
-                  <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-                </div>
+                <h2 class="animate__animated animate__fadeInDown">Apa Itu Virus Corona</h2>
+                <p class="animate__animated animate__fadeInUp">
+                Corona merupakan keluarga virus yang telah lama ada dan diketahui menyebabkan penyakit pada hewan serta manusia.
+                Beberapa jenis virus corona yang telah teridentifikasi memicu penyakit yang menyebabkan kematian,
+                seperti sindrom pernapasan Timur Tengah (MERS) dan sindrom pernapasan akut berat (SARS).
+                </p>
               </div>
             </div>
           </div>
 
           <!-- Slide 3 -->
-          <div class="carousel-item" style="background: url({{asset('assets/user/img/slide/slide-3.jpg')}}">
-            <div class="carousel-background"><img src="{{asset('assets/user/img/slide/slide-3.jpg')}}"alt=""></div>
+          <div class="carousel-item" style="background: url({{asset('assets/user/img/slide/slide-6.jpg')}}">
+            <div class="carousel-background"><img src="{{asset('assets/user/img/slide/slide-6.jpg')}}"alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-                <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <div>
-                  <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
-                </div>
+                <h2 class="animate__animated animate__fadeInDown">Cara Memutuskan Rantai Penularan Virus Corona</h2>
+                <p class="animate__animated animate__fadeInUp">
+                Berdiam di rumah menjadi salah satu solusi terbaik dalam memutus rantai penularan virus tersebut.
+                Sifat virus Corona adalah mampu berkembang biak dengan cara membelah diri dan sering bermutasi.
+                Ini sangat rentan apabila orang yang tidak patuh untuk tinggal di rumah terpapar berulang-ulang oleh pembawa virus</p>
               </div>
             </div>
           </div>
@@ -126,65 +123,62 @@
    <!-- ======= Counts Section ======= -->
    <section id="counts" class="counts">
    <div class="section-title">
-          <br><h2>Data Indonesia</h2>
+          <br><h2>Data Kasus Covid-19</h2>
     </div>
       <div class="container">
-
         <div class="row no-gutters">
-
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-            <p><h5><strong>Total Positif</strong></h5></p>
-					    <i class="icofont-sad"></i>
-              <span data-toggle="counter-up">{{number_format($positif)}}</span>
+              <p><h5><strong>Total Positif</strong></h5></p>
+              <i class="icofont-open-mouth"></i>
+              <span data-toggle="counter-up">{{number_format($positif)}} </span>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-            <p><h5><strong>Total Sembuh</strong></h5></p>
-              <i class="icofont-heart-eyes"></i>
+              <p><h5><strong>Total Sembuh</strong></h5></p>
+              <i class="icofont-laughing"></i>
               <span data-toggle="counter-up">{{number_format($sembuh)}}</span>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-            <p><h5><strong>Total Meninggal</strong></h5></p>
-					    <i class="icofont-crying"></i>
+              <p><h5><strong>Total Meninggal</strong></h5></p>
+              <i class="icofont-worried"></i>
               <span data-toggle="counter-up">{{number_format($meninggal)}}</span>
             </div>
           </div>
-
           <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
             <div class="count-box">
-              <p><h5><strong>Total </strong></h5></p>
-              <i class="icofont-users-alt-5"></i>
-              <span data-toggle="counter-up">15</span>
+              <p><h5><strong>Dunia</strong></h5></p>
+              <i class="icofont-ui-browser"></i>
+              <span data-toggle="counter-up"><?php echo $getglobal['value'] ?></span>
             </div>
           </div>
-
-        </div>
-
       </div>
     </section><!-- End Counts Section -->
-
+    
     <!-- ======= About Section ======= -->
     <section id="provinsi" class="provinsi">
     <div class="container">
         <div class="section-title" data-aos="zoom-out">
           <h2>Data Kasus Coronavirus di Indonesia Berdasarkan Provinsi </h2>
         </div>
-        <div class="row content" data-aos="fade-up">
-            <div class="table-wrapper-scroll-y my-custom-scrollbar col-lg-12">
-              <table class="table table-bordered table-striped mb-0 " width="100%">
+      <div class="row row-cards">
+							<div class="col-sm-12 col-md-12 col-lg-12 col-xl-14">
+								<div class="card">
+									<div class="card-body">
+                  <div class="table-wrapper-scroll-y my-custom-scrollbar col-lg-12">
+              <table class="table table-bordered table-striped mb-0 "  width="100%">
                 <thead>
                 <tr>
                 <th scope="col">No</th>
                 <th scope="col">Provinsi</th>
                 <th scope="col">Positif</th>
-                <th scope="col">Meninggal</th>
                 <th scope="col">Sembuh</th>
+                <th scope="col">Meninggal</th>
             </tr>
         </thead>
                 <tbody>
@@ -196,15 +190,15 @@
                     <th scope="row">{{$no++}}</th>
                     <td>{{$tmpl->nama_provinsi}}</td>
                     <td>{{number_format($tmpl->jumlah_positif)}}</td>
-                    <td>{{number_format($tmpl->jumlah_meninggal)}}</td>
                     <td>{{number_format($tmpl->jumlah_sembuh)}}</td>
+                    <td>{{number_format($tmpl->jumlah_meninggal)}}</td>
                 </tbody>
                 @endforeach
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+                </tbody>
+                </table>
+								</div>
+							</div><!-- COL END -->
+						</div>
     </section><!-- End About Section -->
 
     <!-- ======= Global Section ======= -->
@@ -213,8 +207,11 @@
         <div class="section-title" data-aos="zoom-out">
           <h2>Data Kasus Dunia</h2>
         </div>
-        <div class="row content" data-aos="fade-up">
-            <div class="table-wrapper-scroll-y my-custom-scrollbar col-lg-12">
+      <div class="row row-cards">
+							<div class="col-sm-12 col-md-12 col-lg-12 col-xl-14">
+								<div class="card">
+									<div class="card-body">
+                  <div class="table-wrapper-scroll-y my-custom-scrollbar col-lg-12">
               <table class="table table-bordered table-striped mb-0 "  width="100%">
                 <thead>
                   <tr>
@@ -239,13 +236,10 @@
                     </tr>
                   @endforeach
                 </tbody>
-                
-              </table>
-            </div>
-          </div>
-        </div>
-
-      </div>
+                </table>
+								</div>
+							</div><!-- COL END -->
+						</div>
     </section><!-- End Global Section -->
 
     <!-- ======= Team Section ======= -->
@@ -253,25 +247,25 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Tim</h2>
+          <p>Kami hadir untuk menyediakan informasi sekitar covid-19 dan juga membantu masyarakat</p>
         </div>
 
         <div class="row">
 
           <div class="col-xl-3 col-lg-4 col-md-6">
             <div class="member">
-              <img src="{{asset('assets/user/img/team/team-1.jpg')}}"class="img-fluid" alt="">
+              <img src="{{asset('assets/user/img/team/iki.JPEG')}}"class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
-                  <div class="social">
+                  <h4>Rifqi Miftahudin</h4>
+                  <!-- <span>Chief Executive Officer</span> -->
+                  <!-- <div class="social">
                     <a href=""><i class="icofont-twitter"></i></a>
                     <a href=""><i class="icofont-facebook"></i></a>
                     <a href=""><i class="icofont-instagram"></i></a>
                     <a href=""><i class="icofont-linkedin"></i></a>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -279,17 +273,17 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.1s">
             <div class="member">
-              <img src="{{asset('assets/user/img/team/team-2.jpg')}}"class="img-fluid" alt="">
+              <img src="{{asset('assets/user/img/team/ajay.JPEG')}}"class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                  <div class="social">
+                  <h4>Achmad Maulana Fajar Rosadi</h4>
+                  <!-- <span>Product Manager</span> -->
+                  <!-- <div class="social">
                     <a href=""><i class="icofont-twitter"></i></a>
                     <a href=""><i class="icofont-facebook"></i></a>
                     <a href=""><i class="icofont-instagram"></i></a>
                     <a href=""><i class="icofont-linkedin"></i></a>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -297,17 +291,17 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.2s">
             <div class="member">
-              <img src="{{asset('assets/user/img/team/team-3.jpg')}}"class="img-fluid" alt="">
+              <img src="{{asset('assets/user/img/team/ilham.JPEG')}}"class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                  <div class="social">
+                  <h4>Ilham Ahmad Samsudin</h4>
+                  <!-- <span>CTO</span> -->
+                  <!-- <div class="social">
                     <a href=""><i class="icofont-twitter"></i></a>
                     <a href=""><i class="icofont-facebook"></i></a>
                     <a href=""><i class="icofont-instagram"></i></a>
                     <a href=""><i class="icofont-linkedin"></i></a>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -315,17 +309,17 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-wow-delay="0.3s">
             <div class="member">
-              <img src="{{asset('assets/user/img/team/team-4.jpg')}}"class="img-fluid" alt="">
+              <img src="{{asset('assets/user/img/team/hilmi.JPEG')}}"class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                  <div class="social">
+                  <h4>Hilmi Fadhilah Darmawan</h4>
+                  <!-- <span>Accountant</span> -->
+                  <!-- <div class="social">
                     <a href=""><i class="icofont-twitter"></i></a>
                     <a href=""><i class="icofont-facebook"></i></a>
                     <a href=""><i class="icofont-instagram"></i></a>
                     <a href=""><i class="icofont-linkedin"></i></a>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -338,11 +332,10 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    <div class="container">
+      <div class="section-title">
+          <h2>Hubungi Kami</h2>
+         <p class="gr-text-8 mb-13">Berikut informasi kontak yang bisa digunakan untuk berbagai keperluan.</p>
         </div>
 
         <div class="row contact-info">
@@ -350,16 +343,16 @@
           <div class="col-md-4">
             <div class="contact-address">
               <i class="icofont-google-map"></i>
-              <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <h3>Lokasi</h3>
+              <address>JL.Situtarate - Cibaduyut, Kab.Bandung</address>
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="contact-phone">
               <i class="icofont-phone"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <h3>Nomor Telepon</h3>
+              <p><a href="tel:++6281285916892">+62 812 8591 6892</a></p>
             </div>
           </div>
 
@@ -367,13 +360,13 @@
             <div class="contact-email">
               <i class="icofont-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:info@example.com">trakingcovid19@gmail.com</a></p>
             </div>
           </div>
 
         </div>
 
-        <div class="form">
+        <!-- <div class="form">
           <form action="forms/contact.php" method="post" role="form" class="php-email-form">
             <div class="form-row">
               <div class="col-md-6 form-group">
@@ -402,7 +395,7 @@
           </form>
         </div>
 
-      </div>
+      </div> -->
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
@@ -415,12 +408,12 @@
 
           <div class="col-lg-3 col-md-6">
             <div class="footer-info">
-              <h3>Groovin</h3>
+              <h3>Traking Covid</h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                JL.Situtarate - Cibaduyut <br>
+                Kab.Bandung<br><br>
+                <strong>Telepon:</strong> +62 812 8591 6892<br>
+                <strong>Email:</strong> trakingcovid19@gmail.com<br>
               </p>
               <div class="social-links mt-3">
                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -433,30 +426,30 @@
           </div>
 
           <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Tautan Berguna</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Data Kasus</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Provinsi</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Dunia</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Tim</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Kontak</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Pelayanan Kami</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Desain Web</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Pengembang Web</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Manajemen Produk</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Pemasaran</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Desain Grafis</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <h4>Newsletter kami</h4>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
@@ -469,14 +462,14 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>Groovin</span></strong>. All Rights Reserved
+        &copy; Hak Cipta <strong><span>Traking Covid</span></strong>. Seluruh Hak Cipta
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/groovin-free-bootstrap-theme/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Dirancang oleh <a href="https://bootstrapmade.com/">Kelompok1</a>
       </div>
     </div>
   </footer><!-- End Footer -->
