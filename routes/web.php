@@ -18,10 +18,6 @@ Route::get('dashboard',function () {
     return view('layouts.master');
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -51,4 +47,4 @@ use App\Http\Controllers\KasusController;
 Route::resource('kasus', KasusController::class);
 
 use App\Http\Controllers\FrontController;
-Route::resource('user', FrontController::class);
+Route::resource('/', FrontController::class);

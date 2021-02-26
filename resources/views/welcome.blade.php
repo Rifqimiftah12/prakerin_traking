@@ -2,298 +2,565 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Traking covid</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/assets/img/favicon.ico') }}" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
-        rel="stylesheet" type="text/css" />
-    <!-- Third party plugin CSS-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-        rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="{{ asset('assets/assets/css/styles.css') }}" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Traking Covid - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="{{ asset('assets/user/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('assets/user/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="{{ asset('assets/user/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/user/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/user/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/user/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/user/vendor/venobox/venobox.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/user/vendor/owl.carousel/user/owl.carousel.min.css') }}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="{{ asset('assets/user/css/style.css') }}" rel="stylesheet">
 </head>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Traking Covid</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Masthead-->
-    <header class="masthead">
-        <div class="container h-100">
-            <div class="row h-50 align-items-center justify-content-center text-center">
-                <div class="col-lg-10 align-self-end">
-                    <h1 class="text-uppercase text-white font-weight-bold">traking covid</h1>
-                    <hr class="divider my-4" />
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                    <div class="card bg-danger img-card box-primary-shadow">
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <div class="text-white">
-                                    <p class="text-white mb-0">TOTAL POSITIF</p>
-                                    <h2 class="mb-0 number-font">{{ number_format($positif) }}</h2>
-                                    <p class="text-white mb-0">ORANG</p>
-                                </div>
-                                <div class="ml-auto"> <img src="{{ asset('assets/assets/img/sad-u6e.png') }}" width="50"
-                                        height="50"> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                    <div class="card bg-danger img-card box-primary-shadow">
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <div class="text-white">
-                                    <p class="text-white mb-0">TOTAL SEMBUH</p>
-                                    <h2 class="mb-0 number-font">{{ number_format($sembuh) }}</h2>
-                                    <p class="text-white mb-0">ORANG</p>
-                                </div>
-                                <div class="ml-auto"> <img src="{{ asset('assets/assets/img/bahagia.png') }}" width="50"
-                                        height="50"> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4">
-                    <div class="card bg-danger img-card box-primary-shadow">
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <div class="text-white">
-                                    <p class="text-white mb-0">TOTAL MENINGGAL</p>
-                                    <h2 class="mb-0 number-font">{{ number_format($meninggal) }}</h2>
-                                    <p class="text-white mb-0">ORANG</p>
-                                </div>
-                                <div class="ml-auto"> <img src="{{ asset('assets/assets/img/sedih.png') }}" width="50"
-                                        height="50"> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-header ">
-                <h5 class="card-title">Data Kasus Corona virus di Indonesia Berdasarkan Provinsi</h5>
-            </div>
-            <div class="card-body">
-                <div style="height:600px;overflow:auto;margin-right:15px;">
-                    <table class="table table-striped" fixed-header>
-                        <thead>
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Provinsi</th>
-                                <th scope="col">Positif</th>
-                                <th scope="col">Meninggal</th>
-                                <th scope="col">Sembuh</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @php
-                                $no = 1;
-                            @endphp
+<body>
 
-                            @foreach ($data as $tmpl)
-                                <tr>
-                                    <th scope="row">{{ $no++ }}</th>
-                                    <td>{{ $tmpl->nama_provinsi }}</td>
-                                    <td>{{ number_format($tmpl->jumlah_positif) }}</td>
-                                    <td>{{ number_format($tmpl->jumlah_meninggal) }}</td>
-                                    <td>{{ number_format($tmpl->jumlah_sembuh) }}</td>
-                        </tbody>
-                        @endforeach
-                    </table>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center">
+
+            <h1 class="logo mr-auto"><a href="#hero">Traking Covid</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo mr-auto"><img src="{{ asset('assets/user/img/logo.png') }}" alt="" class="img-fluid"></a>-->
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li class="active"></li>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#counts">Data Kasus</a></li>
+                    <li><a href="#provinsi">Provinsi</a></li>
+                    <li><a href="#global">Dunia</a></li>
+                    <li><a href="#team">Tim</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+
+                </ul>
+            </nav><!-- .nav-menu -->
+
+            <!-- <a href="#about" class="get-started-btn scrollto">Get Started</a> -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+                <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+                <div class="carousel-inner" role="listbox">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active"
+                        style="background: url({{ asset('assets/user/img/slide/slide-4.jpg') }}">
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item"
+                        style="background: url({{ asset('assets/user/img/slide/slide-5.jpg') }}">
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2 class="animate__animated animate__fadeInDown">Apa Itu Virus Corona</h2>
+                                <p class="animate__animated animate__fadeInUp">
+                                    Corona merupakan keluarga virus yang telah lama ada dan diketahui menyebabkan
+                                    penyakit pada hewan serta manusia.
+                                    Beberapa jenis virus corona yang telah teridentifikasi memicu penyakit yang
+                                    menyebabkan kematian,
+                                    seperti sindrom pernapasan Timur Tengah (MERS) dan sindrom pernapasan akut berat
+                                    (SARS).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item"
+                        style="background: url({{ asset('assets/user/img/slide/slide-6.jpg') }}">
+                        <div class="carousel-background"><img src="{{ asset('assets/user/img/slide/slide-6.jpg') }}"
+                                alt=""></div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2 class="animate__animated animate__fadeInDown">Cara Memutuskan Rantai Penularan Virus
+                                    Corona</h2>
+                                <p class="animate__animated animate__fadeInUp">
+                                    Berdiam di rumah menjadi salah satu solusi terbaik dalam memutus rantai penularan
+                                    virus tersebut.
+                                    Sifat virus Corona adalah mampu berkembang biak dengan cara membelah diri dan sering
+                                    bermutasi.
+                                    Ini sangat rentan apabila orang yang tidak patuh untuk tinggal di rumah terpapar
+                                    berulang-ulang oleh pembawa virus</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+                <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
             </div>
         </div>
-        </div>
-        </div>
-    </header>
-    <!-- About-->
-    <section class="page-section bg-primary" id="about">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="text-white mt-0">We've got what you need!</h2>
-                    <hr class="divider light my-4" />
-                    <p class="text-white-50 mb-4">Start Bootstrap has everything you need to get your new website up and
-                        running in no time! Choose one of our open source, free to download, and easy to use themes! No
-                        strings attached!</p>
-                    <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>
-                </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= Counts Section ======= -->
+        <section id="counts" class="counts">
+            <div class="section-title">
+                <br>
+                <h2>Data Kasus Covid-19</h2>
             </div>
-        </div>
-    </section>
-    <!-- Services-->
-    <section class="page-section" id="services">
-        <div class="container">
-            <h2 class="text-center mt-0">At Your Service</h2>
-            <hr class="divider my-4" />
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <i class="fas fa-4x fa-gem text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">Sturdy Themes</h3>
-                        <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+                        <div class="count-box">
+                            <p>
+                            <h5><strong>Total Positif</strong></h5>
+                            </p>
+                            <i class="icofont-open-mouth"></i>
+                            <span data-toggle="counter-up">{{ number_format($positif) }} </span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+                        <div class="count-box">
+                            <p>
+                            <h5><strong>Total Sembuh</strong></h5>
+                            </p>
+                            <i class="icofont-laughing"></i>
+                            <span data-toggle="counter-up">{{ number_format($sembuh) }}</span>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+                        <div class="count-box">
+                            <p>
+                            <h5><strong>Total Meninggal</strong></h5>
+                            </p>
+                            <i class="icofont-worried"></i>
+                            <span data-toggle="counter-up">{{ number_format($meninggal) }}</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+                        <div class="count-box">
+                            <p>
+                            <h5><strong>Dunia</strong></h5>
+                            </p>
+                            <i class="icofont-ui-browser"></i>
+                            <span data-toggle="counter-up"><?php echo $getglobal['value']; ?></span>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">Up to Date</h3>
-                        <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
-                    </div>
+        </section><!-- End Counts Section -->
+
+        <!-- ======= About Section ======= -->
+        <section id="provinsi" class="provinsi">
+            <div class="container">
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>Data Kasus Coronavirus di Indonesia Berdasarkan Provinsi </h2>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <i class="fas fa-4x fa-globe text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">Ready to Publish</h3>
-                        <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
-                    </div>
+                <div class="row row-cards">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-14">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-wrapper-scroll-y my-custom-scrollbar col-lg-12">
+                                    <table class="table table-bordered table-striped mb-0 " width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">No</th>
+                                                <th scope="col">Provinsi</th>
+                                                <th scope="col">Positif</th>
+                                                <th scope="col">Sembuh</th>
+                                                <th scope="col">Meninggal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($data as $tmpl)
+                                                <tr>
+                                                    <th scope="row">{{ $no++ }}</th>
+                                                    <td>{{ $tmpl->nama_provinsi }}</td>
+                                                    <td>{{ number_format($tmpl->jumlah_positif) }}</td>
+                                                    <td>{{ number_format($tmpl->jumlah_sembuh) }}</td>
+                                                    <td>{{ number_format($tmpl->jumlah_meninggal) }}</td>
+                                        </tbody>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!-- COL END -->
+                        </div>
+        </section><!-- End About Section -->
+
+        <!-- ======= Global Section ======= -->
+        <section id="global" class="global">
+            <div class="container">
+                <div class="section-title" data-aos="zoom-out">
+                    <h2>Data Kasus Dunia</h2>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <i class="fas fa-4x fa-heart text-primary mb-4"></i>
-                        <h3 class="h4 mb-2">Made with Love</h3>
-                        <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                <div class="row row-cards">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-14">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-wrapper-scroll-y my-custom-scrollbar col-lg-12">
+                                    <table class="table table-bordered table-striped mb-0 " width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">
+                                                    <center>No</center>
+                                                </th>
+                                                <th scope="col">
+                                                    <center>Negara</center>
+                                                </th>
+                                                <th scope="col">
+                                                    <center>Jumlah Positif</center>
+                                                </th>
+                                                <th scope="col">
+                                                    <center>Jumlah Sembuh</center>
+                                                </th>
+                                                <th scope="col">
+                                                    <center>Jumlah Meninggal</center>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @php
+                                                $no = 1;
+                                            @endphp
+                                            @foreach ($globall as $data)
+                                                <tr>
+                                                    <td> <?php echo $no++; ?></td>
+                                                    <td> <?php echo
+                                                        $data['attributes']['Country_Region']; ?></td>
+                                                    <td> <?php echo
+                                                        number_format($data['attributes']['Confirmed']); ?></td>
+                                                    <td><?php echo
+                                                        number_format($data['attributes']['Recovered']); ?></td>
+                                                    <td><?php echo
+                                                        number_format($data['attributes']['Deaths']); ?>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><!-- COL END -->
+                        </div>
+        </section><!-- End Global Section -->
+
+        <!-- ======= Team Section ======= -->
+        <section id="team" class="team">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Tim</h2>
+                    <p>
+                    <h4>Kami hadir untuk menyediakan informasi sekitar covid-19 dan juga membantu masyarakat</h4>
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6" data-wow-delay="0.1s">
+                        <div class="member">
+                            <img src="{{ asset('assets/user/img/team/akang.JPEG') }}" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Muhammad Mulki Sukmana</h4>
+                                    <!-- <span>Product Manager</span> -->
+                                    <div class="social">
+                                        <a href="#tidak ada"><i class="icofont-facebook"></i></a>
+                                        <a href="https://www.instagram.com/muhamadmulkisukmana/"><i
+                                                class="icofont-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="member">
+                            <img src="{{ asset('assets/user/img/team/iki.JPEG') }}" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Rifqi Miftahudin</h4>
+                                    {{-- <span>Chief Executive Officer</span> --}}
+                                    <div class="social">
+                                        <a href="https://web.facebook.com/rifqi.miftahudin.5"><i
+                                                class="icofont-facebook"></i></a>
+                                        <a href="https://www.instagram.com/rifqym40/"><i
+                                                class="icofont-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6" data-wow-delay="0.1s">
+                        <div class="member">
+                            <img src="{{ asset('assets/user/img/team/ajay.JPEG') }}" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Achmad Maulana Fajar Rosadi</h4>
+                                    <!-- <span>Product Manager</span> -->
+                                    <div class="social">
+                                        <a href="https://web.facebook.com/ahmad.m.rosadi.1"><i
+                                                class="icofont-facebook"></i></a>
+                                        <a href="https://www.instagram.com/_iamjay15/"><i
+                                                class="icofont-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6" data-wow-delay="0.2s">
+                        <div class="member">
+                            <img src="{{ asset('assets/user/img/team/ilham.JPEG') }}" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Ilham Ahmad Samsudin</h4>
+                                    <!-- <span>CTO</span> -->
+                                    <div class="social">
+                                        <a href=""><i class="icofont-facebook"></i></a>
+                                        <a href=""><i class="icofont-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6" data-wow-delay="0.2s">
+                        <div class="member">
+                            <img src="{{ asset('assets/user/img/team/hilmi.JPEG') }}" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Hilmi Fadhilah Darmawan</h4>
+                                    <!-- <span>Accountant</span> -->
+                                    <div class="social">
+                                        <a href="#tidak ada"><i class="icofont-facebook"></i></a>
+                                        <a href="https://www.instagram.com/hilmiiefdee_/"><i
+                                                class="icofont-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-4 col-md-6" data-wow-delay="0.3s">
+                        <div class="member">
+                            <img src="{{ asset('assets/user/img/team/siti2.JPEG') }}" class="img-fluid" alt="">
+                            <div class="member-info">
+                                <div class="member-info-content">
+                                    <h4>Siti Sabina</h4>
+                                    <!-- <span>Accountant</span> -->
+                                    <div class="social">
+                                        <a href="https://m.facebook.com/sabina.hilmasaskia?ref=bookmarks"><i
+                                                class="icofont-facebook"></i></a>
+                                        <a href="https://www.instagram.com/sabinaahs_/"><i
+                                                class="icofont-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Team Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Hubungi Kami</h2>
+                    <p class="gr-text-8 mb-13">
+                    <h4>Berikut informasi kontak yang bisa digunakan untuk berbagai keperluan.</h4>
+                    </p>
+                </div>
+
+                <div class="row contact-info">
+
+                    <div class="col-md-4">
+                        <div class="contact-address">
+                            <i class="icofont-google-map"></i>
+                            <h3>Lokasi</h3>
+                            <address>JL.Situtarate - Cibaduyut, Kab.Bandung</address>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="contact-phone">
+                            <i class="icofont-phone"></i>
+                            <h3>Nomor Telepon</h3>
+                            <p><a href="tel:++6281285916892">+62 812 8591 6892</a></p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="contact-email">
+                            <i class="icofont-envelope"></i>
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@example.com">trakingcovid19@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- <div class="form">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="form-row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                <div class="validate"></div>
+              </div>
+              <div class="col-md-6 form-group">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validate"></div>
+            </div>
+            <div class="mb-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div> -->
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-info">
+                            <h3>Traking Covid</h3>
+                            <p>
+                                JL.Situtarate - Cibaduyut <br>
+                                Kab.Bandung<br><br>
+                                <strong>Telepon:</strong> +62 812 8591 6892<br>
+                                <strong>Email:</strong> trakingcovid19@gmail.com<br>
+                            </p>
+                            <div class="social-links mt-3">
+                                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Tautan Berguna</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Data Kasus</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Provinsi</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Dunia</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Tim</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Kontak</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Pelayanan Kami</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Desain Web</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Pengembang Web</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Manajemen Produk</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Pemasaran</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Desain Grafis</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Newsletter kami</h4>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+
+                    </div>
+
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Portfolio-->
-    <div id="portfolio">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="{{ asset('assets/assets/img/portfolio/fullsize/1.jpg') }}">
-                        <img class="img-fluid" src="{{ asset('assets/assets/img/portfolio/thumbnails/1.jpg') }}"
-                            alt="" />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="{{ asset('assets/assets/img/portfolio/fullsize/2.jpg') }}">
-                        <img class="img-fluid" src="{{ asset('assets/assets/img/portfolio/thumbnails/2.jpg') }}"
-                            alt="" />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="{{ asset('assets/assets/img/portfolio/fullsize/3.jpg') }}">
-                        <img class="img-fluid" src="{{ asset('assets/assets/img/portfolio/thumbnails/3.jpg') }}"
-                            alt="" />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="{{ asset('assets/assets/img/portfolio/fullsize/4.jpg') }}">
-                        <img class="img-fluid" src="{{ asset('assets/assets/img/portfolio/thumbnails/4.jpg') }}"
-                            alt="" />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="{{ asset('assets/assets/img/portfolio/fullsize/5.jpg') }}">
-                        <img class="img-fluid" src="{{ asset('assets/assets/img/portfolio/thumbnails/5.jpg') }}"
-                            alt="" />
-                        <div class="portfolio-box-caption">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" href="{{ asset('assets/assets/img/portfolio/fullsize/6.jpg') }}">
-                        <img class="img-fluid" src="{{ asset('assets/assets/img/portfolio/thumbnails/6.jpg') }}"
-                            alt="" />
-                        <div class="portfolio-box-caption p-3">
-                            <div class="project-category text-white-50">Category</div>
-                            <div class="project-name">Project Name</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Call to action-->
-    <section class="page-section bg-dark text-white">
-        <div class="container text-center">
-            <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-            <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
-        </div>
-    </section>
-    <!-- Contact-->
-    <section class="page-section" id="contact">
+
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="mt-0">Let's Get In Touch!</h2>
-                    <hr class="divider my-4" />
-                    <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an
-                        email and we will get back to you as soon as possible!</p>
-                </div>
+            <div class="copyright">
+                &copy; Hak Cipta <strong><span>Traking Covid</span></strong>. Seluruh Hak Cipta
             </div>
-            <div class="row">
-                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                    <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                    <div>+1 (555) 123-4567</div>
-                </div>
-                <div class="col-lg-4 mr-auto text-center">
-                    <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                    <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                    <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
-                </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/groovin-free-bootstrap-theme/ -->
+                Dirancang oleh <a href="https://bootstrapmade.com/">Kelompok1</a>
             </div>
         </div>
-    </section>
-    <!-- Footer-->
-    <footer class="bg-light py-5">
-        <div class="container">
-            <div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div>
-        </div>
-    </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="{{ asset('assets/user/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/user/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/user/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('assets/user/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ asset('assets/user/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/user/vendor/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/user/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/user/vendor/venobox/venobox.min.js') }}"></script>
+    <script src="{{ asset('assets/user/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+
+    <!-- Template Main JS File -->
+    <script src="{{ asset('assets/user/js/main.js') }}"></script>
+
 </body>
 
 </html>
