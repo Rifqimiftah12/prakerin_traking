@@ -6,7 +6,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <center><b>{{ __('Data Kelurahan') }}</b></center>
+                        <center><b>{{ __('Create Data Kelurahan') }}</b></center>
                     </div>
 
                     <div class="card-body">

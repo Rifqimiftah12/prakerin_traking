@@ -27,9 +27,9 @@ class Kasus2Controller extends Controller
     {
         $request->validate([
             'id_rw' => 'required',
-            'jumlah_positif' => 'required|int|unique:kasus2s',
-            'jumlah_meninggal' => 'required|int|unique:kasus2s',
-            'jumlah_sembuh' => 'required|int|unique:kasus2s',
+            'jumlah_positif' => 'required',
+            'jumlah_meninggal' => 'required',
+            'jumlah_sembuh' => 'required',
             
         ],[
             'id_rw.required' => 'Rw is required',
