@@ -59,7 +59,7 @@
             </div>
         </div><!-- COL END -->
         <br>
-        <div class="container">
+        {{-- <div class="container">
             <div class="section-title" data-aos="zoom-out">
                 <h5>
                     <center><b>Data Kasus Coronavirus di Indonesia Berdasarkan Provinsi</b></center>
@@ -97,5 +97,5 @@
                                 </table>
                             </div>
                         </div><!-- COL END -->
-                    </div>
-                @endsection
+                    </div> --}}
+    @endsection
