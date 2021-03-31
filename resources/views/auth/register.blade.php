@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -117,4 +117,4 @@
     <script src="{{ asset('assets/dist/js/adminlte.min.js') }}"></script>
 </body>
 
-</html>
+</html> --}}

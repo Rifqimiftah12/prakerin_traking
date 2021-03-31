@@ -27,15 +27,18 @@ class Kasus2Controller extends Controller
     {
         $request->validate([
             'id_rw' => 'required',
-            'jumlah_positif' => 'required',
-            'jumlah_meninggal' => 'required',
-            'jumlah_sembuh' => 'required',
+            'jumlah_positif' => 'required|min:1',
+            'jumlah_meninggal' => 'required|min:1',
+            'jumlah_sembuh' => 'required|min:1',
             
         ],[
             'id_rw.required' => 'Rw is required',
             'jumlah_positif.required' => 'Jumlah Positif is required',
+            'jumlah_positif.min' => 'Jumlah Positif tidak boleh min',
             'jumlah_meninggal.required' => 'Jumlah Meninggal required',
+            'jumlah_meninggal.min' => 'Jumlah meninggal tidak boleh min',
             'jumlah_sembuh.required' => 'Jumlah Sembuh required',
+            'jumlah_sembuh.min' => 'Jumlah Sembuh tidak boleh min',
         ]);
         $kasus2 = new Kasus2;
         $kasus2->id_rw = $request->id_rw;

@@ -22,24 +22,24 @@
 
                             <div class="form-group">
                                 <label for="">Jumlah Positif</label>
-                                <input type="text" name="jumlah_positif" class="form-control" id="exampleInputEmail1"
-                                    value="{{ $kasus2->jumlah_positif }}">
+                                <input type="number" name="jumlah_positif" class="form-control" id="exampleInputEmail1"
+                                    min="1" value="{{ $kasus2->jumlah_positif }}">
                                 @if ($errors->has('jumlah_positif'))
                                     <span class="text-danger">{{ $errors->first('jumlah_positif') }}</span>
                                 @endif
                             </div>
                             <div class="form-group">
                                 <label for="">Jumlah Meninggal</label>
-                                <input type="text" name="jumlah_meninggal" class="form-control" id="exampleInputEmail1"
-                                    value="{{ $kasus2->jumlah_meninggal }}">
+                                <input type="number" name="jumlah_meninggal" class="form-control" id="exampleInputEmail1"
+                                    min="1" value="{{ $kasus2->jumlah_meninggal }}">
                                 @if ($errors->has('jumlah_meninggal'))
                                     <span class="text-danger">{{ $errors->first('jumlah_meninggal') }}</span>
                                 @endif
                             </div>
                             <div class="form-group">
                                 <label for="">Jumlah Sembuh</label>
-                                <input type="text" name="jumlah_sembuh" class="form-control" id="exampleInputEmail1"
-                                    value="{{ $kasus2->jumlah_sembuh }}">
+                                <input type="number" name="jumlah_sembuh" class="form-control" id="exampleInputEmail1"
+                                    min="1" min="1" value="{{ $kasus2->jumlah_sembuh }}">
                                 @if ($errors->has('jumlah_sembuh'))
                                     <span class="text-danger">{{ $errors->first('jumlah_sembuh') }}</span>
                                 @endif

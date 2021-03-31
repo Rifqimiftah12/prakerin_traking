@@ -34,15 +34,15 @@
                             <div class="form-group">
                                 <div class="mb-3">
                                     <label for="" class="form-label">Jumlah Positif</label>
-                                    <input type="number" name="jumlah_positif" class="form-control" id="">
+                                    <input type="number" name="jumlah_positif" class="form-control" id="" min="1">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Jumlah Meninggal</label>
-                                    <input type="number" name="jumlah_meninggal" class="form-control" id="">
+                                    <input type="number" name="jumlah_meninggal" class="form-control" id="" min="1">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Jumlah Sembuh</label>
-                                    <input type="number" name="jumlah_sembuh" class="form-control" id="">
+                                    <input type="number" name="jumlah_sembuh" class="form-control" id="" min="1">
                                 </div>
                                 <div class="mb-3">
                                     <label for="" class="form-label">Tanggal</label>

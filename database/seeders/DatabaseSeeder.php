@@ -18,7 +18,8 @@ class DatabaseSeeder extends Seeder
           ProvinsiSeeder::class,
           KotaSeeder::class,
           KelurahanSeeder::class,
-          KecamatanSeeder::class
+          KecamatanSeeder::class,
+          UserSeeder::class
         ]);
     }
 }
