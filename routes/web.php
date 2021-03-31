@@ -47,4 +47,5 @@ use App\Http\Controllers\KasusController;
 Route::resource('kasus', KasusController::class);
 
 use App\Http\Controllers\FrontController;
+Route::resource('user', FrontController::class);
 Route::resource('/', FrontController::class);

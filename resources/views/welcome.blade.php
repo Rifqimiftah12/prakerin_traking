@@ -223,7 +223,7 @@
         </section><!-- End About Section -->
 
         <!-- ======= Global Section ======= -->
-        {{-- <section id="global" class="global">
+        <section id="global" class="global">
             <div class="container">
                 <div class="section-title" data-aos="zoom-out">
                     <h2>Data Kasus Dunia</h2>
@@ -260,19 +260,23 @@
                                             @foreach ($globall as $data)
                                                 <tr>
                                                     <td> <?php echo $no++; ?></td>
-                                                    <td> <?php echo $data['attributes']['Country_Region']; ?></td>
-                                                    <td> <?php echo number_format($data['attributes']['Confirmed']); ?></td>
-                                                    <td><?php echo number_format($data['attributes']['Recovered']); ?></td>
-                                                    <td><?php echo number_format($data['attributes']['Deaths']); ?>
+                                                    <td> <?php echo
+                                                        $data['attributes']['Country_Region']; ?></td>
+                                                    <td> <?php echo
+                                                        number_format($data['attributes']['Confirmed']); ?></td>
+                                                    <td><?php echo
+                                                        number_format($data['attributes']['Recovered']); ?></td>
+                                                    <td><?php echo
+                                                        number_format($data['attributes']['Deaths']); ?>
                                                     </td>
                                                 </tr>
                                             @endforeach
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            </div><!-- COL END -->
                         </div>
-        </section><!-- End Global Section --> --}}
+        </section><!-- End Global Section -->
 
         <!-- ======= Team Section ======= -->
         <section id="team" class="team">

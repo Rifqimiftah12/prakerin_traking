@@ -386,7 +386,8 @@
                                     <div class="social">
                                         <a href="https://m.facebook.com/sabina.hilmasaskia?ref=bookmarks"><i
                                                 class="icofont-facebook"></i></a>
-                                        <a href="https://www.instagram.com/sabinaahs_/"><i class="icofont-instagram"></i></a>
+                                        <a href="https://www.instagram.com/sabinaahs_/"><i
+                                                class="icofont-instagram"></i></a>
                                     </div>
                                 </div>
                             </div>
