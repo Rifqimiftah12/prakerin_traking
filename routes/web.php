@@ -49,3 +49,8 @@ Route::resource('kasus', KasusController::class);
 use App\Http\Controllers\FrontController;
 Route::resource('user', FrontController::class);
 Route::resource('/', FrontController::class);
+// report
+use App\Http\Controllers\ReportController;
+Route::get('pdfkasus', [ReportController::class, 'kasus'])->name('pdfkasus');
+Route::get('laporanprov', [ReportController::class, 'getReportProvinsi']);
+Route::post('laporanprov', [ReportController::class, 'ReportProvinsi']);

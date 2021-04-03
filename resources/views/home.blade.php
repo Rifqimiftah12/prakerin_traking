@@ -18,7 +18,7 @@
                                 <h2 class="mb-0 number-font">{{ number_format($positif) }}</h2>
                                 <p class="text-white mb-0">Orang</p>
                             </div>
-                            <div class="ml-auto"> <img src="{{ asset('assets/assets/img/sedih.png') }}" width="50"
+                            <div class="ml-auto"> <img src="{{ asset('assets/assets/img/sedih1.png') }}" width="50"
                                     height="50"> </div>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                                 <h2 class="mb-0 number-font">{{ number_format($meninggal) }}</h2>
                                 <p class="text-white mb-0">Orang</p>
                             </div>
-                            <div class="ml-auto"> <img src="{{ asset('assets/assets/img/sedih1.png') }}" width="50"
+                            <div class="ml-auto"> <img src="{{ asset('assets/assets/img/sedih.png') }}" width="50"
                                     height="50">
                             </div>
                         </div>

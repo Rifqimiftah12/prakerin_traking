@@ -28,7 +28,7 @@
                             @endif
                             <div class="mb-3">
                                 <label for="" class="form-label">Kode Provinsi</label>
-                                <input type="text" name="kode_provinsi" class="form-control" id="">
+                                <input type="text" name="kode_provinsi" class="form-control" max="34" id="">
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Provinsi</label>

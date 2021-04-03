@@ -24,10 +24,11 @@ class ProvinsiController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'kode_provinsi' => 'required|int|unique:provinsis',
+            'kode_provinsi' => 'required|int|unique:provinsis|max:34',
             'nama_provinsi' => 'required|unique:provinsis',
         ],[
             'kode_provinsi.required' => 'Kode is required',
+            'kode_provinsi.max' => 'Jumlah Provinsi tidak boleh lebih dari 34 karena provinsi cuman ada 34',
             'nama_provinsi.required' => 'Provinsi required'
         ]);
 

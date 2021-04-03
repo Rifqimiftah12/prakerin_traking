@@ -24,29 +24,23 @@
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-                {{-- <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Global
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li  class="{{request()->is('negara') ? 'active' : ''}">
-                <a href="/negara" class="nav-link ">
+                <li class="nav-item has-treeview menu-open">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Laporan
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="{{request()->is('laporanprov') ? 'active' : ''}">
+                <a href="/laporanprov" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Negara</p>
-                </a>
-              </li>
-              <li  class="{{request()->is('kasus') ? 'active' : ''}">
-                <a href="/kasus" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Kasus Global</p>
+                  <p>Laporan Provinsi</p>
                 </a>
               </li>
             </ul>
-          </li> --}}
+          </li>
 
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
@@ -62,13 +56,8 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="{{request()->is('home*') ? 'active' : ''}">
-                <a href="/home" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dasboard</p>
-                </a>
-              </li>
-              <li class="{{request()->is('provinsi*') ? 'active' : ''}">
+
+                                <li class="{{request()->is('provinsi*') ? 'active' : ''}">
                 <a href="/provinsi" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Provinsi</p>

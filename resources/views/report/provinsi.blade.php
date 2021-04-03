@@ -8,7 +8,7 @@
                         Data Laporan Provinsi
                     </div>
                     <div class="card-body">
-                        <form action="{{ url('admin/report-provinsi') }}" method="POST">
+                        <form action="{{ url('laporanprov') }}" method="POST">
                             @csrf
                             <div class="row">
                                 <div class="col-md-5">
@@ -50,9 +50,9 @@
                                             <tr>
                                                 <td>{{ $no++ }}</td>
                                                 <td>{{ $data->nama_provinsi }}</td>
-                                                <td>{{ $data->positif }}</td>
-                                                <td>{{ $data->sembuh }}</td>
-                                                <td>{{ $data->meninggal }}</td>
+                                                <td>{{ $data->jumlah_positif }}</td>
+                                                <td>{{ $data->jumlah_sembuh }}</td>
+                                                <td>{{ $data->jumlah_meninggal }}</td>
                                                 <td>{{ date('d M Y', strtotime($data->tanggal)) }}</td>
                                             </tr>
                                         @endforeach
